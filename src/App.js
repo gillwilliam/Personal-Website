@@ -1,15 +1,28 @@
+import Home from './Home';
+import Music from './Music';
+
 var React = require('react');
 var ReactRouter = require('react-router-dom');
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Switch = ReactRouter.Switch;
+
 var Nav = require('./Nav');
+const Graph = require('./Graphs');
 var OtherPage = require('./OtherPage');
-const Music = require('./Music');
+
+
 const logo = require('./logo.svg');
 const css = require('./App.css');
+const injectTapEventPlugin = require('react-tap-event-plugin');
 
 class App extends React.Component {
+
+  constructor(props){
+    super(props);
+    injectTapEventPlugin();
+  }
+
   render() {
     return (
       <div className="App">
@@ -18,7 +31,8 @@ class App extends React.Component {
           <Nav />
 
           <Switch>
-            <Route exact path='/otherPage' component={OtherPage} />
+            <Route exact path='/' component={Home} />
+            <Route exact path='/graphs' component={Graph} />
             <Route exact path='/music' component={Music} />
             <Route render={function () {
               return <p>Not Found</p>

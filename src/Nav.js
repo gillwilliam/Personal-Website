@@ -12,8 +12,8 @@ function Nav () {
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName='active' to='/page1'>
-              Archives
+            <NavLink activeClassName='active' to='/graphs'>
+              Graph
             </NavLink>
           </li>
           <li>
