@@ -9,14 +9,11 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
  * Note that since no `onTouchTap` property is defined, the Chip can be focused, but does not gain depth
  * while clicked or touched.
  */
-export default class ChipExampleArray extends React.Component {
+export default class SkillChips extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {chipData: [
-      {key: 0, label: 'Angular'},
-      {key: 1, label: 'JQuery'}
-    ]};
+    this.state = {chipData: this.props.chip};
     this.styles = {
       chip: {
         margin: 4,
@@ -44,7 +41,7 @@ export default class ChipExampleArray extends React.Component {
     return (
       <Chip
         key={data.key}
-        onRequestDelete={() => this.handleRequestDelete(data.key)}
+
         style={this.styles.chip}
       >
         {data.label}

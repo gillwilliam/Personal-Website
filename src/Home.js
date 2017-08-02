@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Picture from './610.png'
-import ChipExampleArray from './ExampleChip'
+import SkillChips from './SkillChips'
 import Music from './Music';
 import TypeWriter from 'react-typewriter';
+import IconSkills from './IconSkills';
 
 class Home extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class Home extends React.Component {
             <br/>
             University of Waterloo Class of 2021</p>
         </div>
+        <IconSkills />
 
 
         <div>
@@ -36,13 +38,28 @@ class ExperienceGrid extends React.Component {
     var work = [
       {
         img: "http://www.team610.com/wp-content/uploads/2013/11/cropped-Untitled-151-150x150.png",
-        title: "Team 610"
+        title: "Team 610",
+        chipData: [
+          {key: 0, label: 'Robotics'},
+          {key: 1, label: 'Java'},
+          {key: 2, label: 'C'}
+        ]
       }, {
         img: "http://static1.squarespace.com/static/56a4fc36ab28105c1174867d/t/58d0aeb8b3db2bea2629560f/1500330563012/?format=1500w",
-        title: "Katla Labs"
+        title: "Katla Labs",
+        chipData: [
+          {key: 0, label: 'Android'},
+          {key: 1, label: 'FireBase'},
+          {key: 2, label: 'Git'},
+        ]
       }, {
         img: "http://www.viarail.ca/sites/all/files/media/images/logo/logo_viarail-large-carre.png",
-        title: "Via Rail"
+        title: "Via Rail",
+        chipData: [
+          {key: 0, label: 'React'},
+          {key: 1, label: 'NodeJS'},
+          {key: 2, label: 'SQL'}
+        ]
       },
       {
         img: "http://sas.uwaterloo.ca/~wang/img/uw.png",
@@ -51,12 +68,15 @@ class ExperienceGrid extends React.Component {
     ].slice(0,3)
 
 
+
+
+
     return (
       <div className="container-fluid popular-list">
         {work.map((elem) => {
           return (
             <ul className='space-list-items'>
-              <OtherPage img={elem.img} title={elem.title}/>
+              <ExperienceElement img={elem.img} chip={elem.chipData} title={elem.title}/>
             </ul>
 
           )
@@ -66,7 +86,7 @@ class ExperienceGrid extends React.Component {
   }
 }
 
-class OtherPage extends React.Component {
+class ExperienceElement extends React.Component {
 
   render() {
 
@@ -76,14 +96,17 @@ class OtherPage extends React.Component {
 
     return (
       <div className="col">
+      <a href="http://team610.com/">
       <h4 style={imgStyle}>{this.props.title}</h4>
+      </a>
         <div className="row">
           <div className="col-sm-5">
             <img className="test" src={this.props.img} alt="Card image cap"/>
           </div>
           <div className="col-sm-1">
-            <ChipExampleArray/>
+            <SkillChips chip={this.props.chip}/>
           </div>
+
         </div>
         <div >
         </div>

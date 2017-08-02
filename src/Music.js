@@ -35,18 +35,6 @@ class Music extends React.Component {
   }
 
   render() {
-    var work = [
-      {
-        img: "http://team610.com/wp-content/uploads/2016/02/Team610SponsorshipPackagePage3_Coverpage-.png",
-        title: "Team 610"
-      }, {
-        img: "http://static1.squarespace.com/static/56a4fc36ab28105c1174867d/t/58d0aeb8b3db2bea2629560f/1500330563012/?format=1500w",
-        title: "Katla Labs"
-      }, {
-        img: "https://upload.wikimedia.org/wikipedia/commons/2/23/VIA_Rail_Canada_simplified.svg",
-        title: "Via Rail"
-      }
-    ]
     return (
       <div>
         <div className="row backCheck">
@@ -118,33 +106,6 @@ class MusicGrid extends React.Component {
       </ul>
     )
   }
-}
-
-class FavouriteArtist extends React.Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      img: "https://lastfm-img2.akamaized.net/i/u/174s/885f2fc115479f7a9e48ffa827fbec1a.png",
-      artist: "Amine",
-      plays: "32"
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <div className='column'>
-          <img className='Artist-Pic' src={this.state.img} alt={"Picture of: " + this.state.artist}/>
-          <h2 className='username'>{this.state.artist}</h2>
-          <p>{this.state.plays}
-            plays</p>
-        </div>
-      </div>
-
-    )
-  }
-
 }
 
 export default Music

@@ -29,7 +29,7 @@
   border-radius: 50%;
 }
 
-.Album-Pic{
+.Album-Pic {
   width: 150px;
   border-radius: 10%;
 }
@@ -79,34 +79,46 @@ li {
   display: inline;
 }
 
-.doubletest{
+.doubletest {
   display: flex;
 }
 
-
 .typewriter h2 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
 
-#element2 {display:inline-block;}
 
 /* The typing effect */
+
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
 }
 
+
 /* The typewriter cursor effect */
+
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: orange;
+  }
 }
 
 @keyframes App-logo-spin {
@@ -116,4 +128,65 @@ li {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/*Skills */
+
+.my-skills {
+  background: #7bc3d1;
+  padding: 60px 0;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.my-skills i {
+  font-size: 70px;
+}
+
+.my-skills h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 18px;
+}
+
+.skill-grids {
+  margin-top: 50px;
+}
+
+.skills-grid p {
+  margin: 20px 0 0 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.circle {
+  color: #ffffff;
+  font-size: 36px;
+}
+
+figcaption {
+  margin-top: 5px;
+  color: #ffffff;
+}
+
+figure {
+  margin: 30px;
+  display: inline-block;
+}
+
+span.circles-number {
+  font-size: 36px;
+}
+
+span.circles-text {
+  font-size: 36px;
+}
+
+.circles-text-wrp {
+  line-height: 142px !important;
 }
