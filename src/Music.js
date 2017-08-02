@@ -1,4 +1,7 @@
 import Paper from 'material-ui/Paper';
+import TypeWriter from 'react-typewriter';
+import TopElement from './TopElement';
+import HtmlTag from './HtmlTag';
 
 var React = require('react');
 const Api = require('./Api');
@@ -45,37 +48,72 @@ class Music extends React.Component {
       }
     ]
     return (
-      <div className="center">
-        <h1>On Heavy Rotation</h1>
-        <h2>Artists</h2>
-        <div className="container popular-list">
-          {this.state.artists.map((artist) => {
-            return (<ArtistGrid img={artist.image[3]["#text"]} artistName={artist.name} playCount={artist.playcount} url={artist.url}/>)
-          })}
+      <div>
+        <div className="row backCheck">
+          <div className="col-sm-4">
+            <div className="animation-text-styling">
+              <TopElement word={"LOYALTY"}/>
+            </div>
+          </div>
+          <div className="col-sm-4">
+            <div className="animation-text-styling">
+              <TopElement word={"LOYALTY"}/>
+            </div>
+          </div>
+          <div className="col-sm-4">
+            <div className="animation-text-styling">
+              <TopElement word={"LOYALTY"}/>
+            </div>
+          </div>
         </div>
-        <h2>Albums</h2>
-        <div className="container popular-list">
-          {this.state.albums.map((albums) => {
-            return (<ArtistGrid img={albums.image[3]["#text"]} artistName={albums.name} playCount={albums.playcount} url={albums.url}/>)
-          })}
+
+        <div className="center">
+          <br/>
+
+            <img src="https://image.flaticon.com/icons/svg/149/149125.svg" style={{
+              height: "150",
+              width: 150
+            }}/>
+
+
+
+          <hr/>
+
+          <div className="container popular-list">
+            {this.state.artists.map((artist) => {
+              return (<MusicGrid img={artist.image[3]["#text"]} artistName={artist.name} playCount={artist.playcount} url={artist.url} artist={true}/>)
+            })}
+          </div>
+
+          <br/>
+          <div className="container popular-list">
+            {this.state.albums.map((albums) => {
+              return (<MusicGrid img={albums.image[3]["#text"]} artistName={albums.name} playCount={albums.playcount} url={albums.url} artist={false}/>)
+            })}
+          </div>
+
         </div>
       </div>
     )
   }
 }
 
-class ArtistGrid extends React.Component {
+class MusicGrid extends React.Component {
 
   render() {
     return (
       <ul className='space-list-items'>
         <li>
-          <img className='Artist-Pic' src={this.props.img} alt={'Avatar for ' + this.props.artistName}/>
+          <img className={this.props.artist
+            ? 'Artist-Pic'
+            : 'Album-Pic'} src={this.props.img} alt={'Avatar for ' + this.props.artistName}/>
         </li>
         <li>
           <a href={this.props.url}>{this.props.artistName}</a>
         </li>
-        <li>{this.props.playCount}
+        <li style={{
+          fontWeight: "bold"
+        }}>{this.props.playCount}
           plays</li>
       </ul>
     )

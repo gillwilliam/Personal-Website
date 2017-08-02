@@ -2,24 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Picture from './610.png'
 import ChipExampleArray from './ExampleChip'
-import Music from './Music'
+import Music from './Music';
+import TypeWriter from 'react-typewriter';
 
 class Home extends React.Component {
   render() {
     return (
       <div>
         <div className="jumbotron">
-          <h2>William Gill</h2>
+        <TypeWriter initDelay={2000} minDelay={80} typing={1}>
+        <h2>William Gill</h2></TypeWriter>
           <p>Computer Science Student
             <br/>
             University of Waterloo Class of 2021</p>
         </div>
 
+
         <div>
 
           <ExperienceGrid/>
+          <br />
           <Music />
         </div>
+
 
       </div>
     )
@@ -27,7 +32,6 @@ class Home extends React.Component {
 }
 
 class ExperienceGrid extends React.Component {
-
   render() {
     var work = [
       {
@@ -44,7 +48,8 @@ class ExperienceGrid extends React.Component {
         img: "http://sas.uwaterloo.ca/~wang/img/uw.png",
         title: "University of Waterloo"
       }
-    ]
+    ].slice(0,3)
+
 
     return (
       <div className="container-fluid popular-list">
@@ -72,7 +77,7 @@ class OtherPage extends React.Component {
     return (
       <div className="col">
       <h4 style={imgStyle}>{this.props.title}</h4>
-        <div className="row alert alert-info">
+        <div className="row">
           <div className="col-sm-5">
             <img className="test" src={this.props.img} alt="Card image cap"/>
           </div>

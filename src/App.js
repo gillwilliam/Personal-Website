@@ -1,5 +1,6 @@
 import Home from './Home';
 import Music from './Music';
+import TopElement from './TopElement';
 
 var React = require('react');
 var ReactRouter = require('react-router-dom');
@@ -27,7 +28,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-        <div className='container-fluid'>
+        <div className="container-fluid">
           <Nav />
 
           <Switch>
