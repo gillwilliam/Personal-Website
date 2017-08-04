@@ -67,16 +67,16 @@ class Music extends React.Component {
 
           <hr/>
 
-          <div className="container popular-list">
+          <div className="container-fluid popular-list">
             {this.state.artists.map((artist) => {
-              return (<MusicGrid img={artist.image[3]["#text"]} artistName={artist.name} playCount={artist.playcount} url={artist.url} artist={true}/>)
+              return (<MusicGrid img={artist.image[3]["#text"]} artistName={artist.name.substring(0,19)} playCount={artist.playcount} url={artist.url} artist={true}/>)
             })}
           </div>
 
           <br/>
-          <div className="container popular-list">
+          <div className="container-fluid popular-list">
             {this.state.albums.map((albums) => {
-              return (<MusicGrid img={albums.image[3]["#text"]} artistName={albums.name} playCount={albums.playcount} url={albums.url} artist={false}/>)
+              return (<MusicGrid img={albums.image[3]["#text"]} artistName={albums.name.substring(0,19)} playCount={albums.playcount} url={albums.url} artist={false}/>)
             })}
           </div>
 
@@ -101,8 +101,7 @@ class MusicGrid extends React.Component {
         </li>
         <li style={{
           fontWeight: "bold"
-        }}>{this.props.playCount}
-          plays</li>
+        }}>{this.props.playCount} plays</li>
       </ul>
     )
   }

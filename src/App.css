@@ -12,6 +12,22 @@
   color: white;
 }
 
+.margin-add{
+  margin-left: 25px;
+}
+
+.experience-back {
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.experience-back a {
+  margin: 20px 0 0 0;
+  color: #cc3300;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .nav {
   display: flex;
 }
@@ -167,6 +183,10 @@ li {
 .circle {
   color: #ffffff;
   font-size: 36px;
+}
+
+.box{
+  border:1px solid;
 }
 
 figcaption {

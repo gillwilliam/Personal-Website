@@ -29,14 +29,14 @@ class App extends React.Component {
       <div className="App">
         <Router>
         <div className="container-fluid">
-          <Nav />
+
 
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/graphs' component={Graph} />
             <Route exact path='/music' component={Music} />
             <Route render={function () {
-              return <p>Not Found</p>
+              return <Home />
             }} />
           </Switch>
         </div>

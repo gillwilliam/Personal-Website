@@ -10,21 +10,17 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header/>
 
         <IconSkills/>
-        <br />
-        <br />
+        <br/>
+        <br/>
 
-        <div>
+        <ExperienceGrid/>
 
-          <div className="container-fluid">
-            <ExperienceGrid/>
-          </div>
-          <br />
-          <br/>
-          <Music/>
-        </div>
+        <br/>
+        <br/>
+        <Music/>
 
       </div>
     )
@@ -84,18 +80,36 @@ class ExperienceGrid extends React.Component {
         ]
       }, {
         img: "http://sas.uwaterloo.ca/~wang/img/uw.png",
-        title: "University of Waterloo"
+        title: "University of Waterloo",
+        url: "http://www.viarail.ca/en",
+        chipData: [
+          {
+            key: 0,
+            label: 'React'
+          }, {
+            key: 1,
+            label: 'NodeJS'
+          }, {
+            key: 2,
+            label: 'SQL'
+          }
+        ]
       }
     ].slice(0, 3)
 
     return (
-      <div className="container-fluid popular-list">
-        {work.map((elem) => {
-          return (
-            <ul className='space-list-items'>
-              <ExperienceElement url={elem.url} img={elem.img} chip={elem.chipData} title={elem.title}/>
-            </ul>
+      <div className="container">
 
+
+
+        {work.map((elem, index) => {
+          return (
+            <div>
+            <div className="margin-add  col-md-3 experience-back">
+              <ExperienceElement url={elem.url} img={elem.img} chip={elem.chipData} title={elem.title}/>
+            </div>
+            {(index != 2) && <div className="col-sm-1"/>}
+            </div>
           )
         })}
       </div>
@@ -112,21 +126,18 @@ class ExperienceElement extends React.Component {
     };
 
     return (
-      <div className="col">
-        <a href={this.props.url}>
-          <h4>{this.props.title}</h4>
-        </a>
+      <div className="row">
+          <a href={this.props.url}>
+            <h4>{this.props.title}</h4>
+          </a>
         <div className="row">
-          <div className="col-sm-5">
+          <div className="col-sm-7">
             <img className="test" src={this.props.img} alt="Card image cap"/>
           </div>
-          <div className="col-sm-1">
+          <div className="col-sm-3">
             <SkillChips chip={this.props.chip}/>
           </div>
-
         </div>
-        <div ></div>
-
       </div>
     )
   }
