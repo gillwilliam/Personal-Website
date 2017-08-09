@@ -105,7 +105,7 @@ class ExperienceGrid extends React.Component {
         {work.map((elem, index) => {
           return (
             <div>
-            <div className="margin-add  col-md-3 experience-back">
+            <div className="margin-add col-md-3 experience-back">
               <ExperienceElement url={elem.url} img={elem.img} chip={elem.chipData} title={elem.title}/>
             </div>
             {(index != 2) && <div className="col-sm-1"/>}

@@ -40,7 +40,7 @@ class Music extends React.Component {
         <div className="row backCheck">
           <div className="col-sm-4">
             <div className="animation-text-styling">
-              <TopElement word={"LOYALTY"}/>
+              <TopElement word={"3.14159"}/>
             </div>
           </div>
           <div className="col-sm-4">
