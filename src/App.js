@@ -1,6 +1,7 @@
 import Home from './Home';
 import Music from './Music';
 import TopElement from './TopElement';
+import Footer from './Footer'
 
 var React = require('react');
 var ReactRouter = require('react-router-dom');
@@ -39,6 +40,7 @@ class App extends React.Component {
           </Switch>
         </div>
       </Router>
+      <Footer />
       </div>
     );
   }

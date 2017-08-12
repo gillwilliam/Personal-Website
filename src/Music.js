@@ -37,24 +37,6 @@ class Music extends React.Component {
   render() {
     return (
       <div>
-        <div className="row backCheck">
-          <div className="col-sm-4">
-            <div className="animation-text-styling">
-              <TopElement word={"3.14159"}/>
-            </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="animation-text-styling">
-              <TopElement word={"LOYALTY"}/>
-            </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="animation-text-styling">
-              <TopElement word={"LOYALTY"}/>
-            </div>
-          </div>
-        </div>
-
         <div className="center">
           <br/>
 
