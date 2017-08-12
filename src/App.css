@@ -87,6 +87,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-right: 15px;
 }
 
 .beside {
@@ -251,4 +252,11 @@ span.circles-text {
 .my-experience img {
   width: 150px;
   border-radius: 10%;
+}
+
+.change {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }

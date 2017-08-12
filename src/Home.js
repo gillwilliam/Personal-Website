@@ -13,6 +13,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <div className="container-fluid">
         <Header/>
 
         <IconSkills/>
@@ -24,7 +25,7 @@ class Home extends React.Component {
         <hr/>
         <ExperienceGrid list={projects} title={"Projects"}/>
         </div>
-
+        </div>
         <br/>
         <br/>
         <Music/>

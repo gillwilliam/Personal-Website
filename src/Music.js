@@ -20,7 +20,7 @@ class Music extends React.Component {
     Api.getArtists().then((data) => {
       this.setState(() => {
         return {
-          artists: data.slice(0, 6)
+          artists: data.slice(0, 8)
         }
       })
     })
@@ -28,7 +28,7 @@ class Music extends React.Component {
     Api.getAlbums().then((data) => {
       this.setState(() => {
         return {
-          albums: data.slice(0, 6)
+          albums: data.slice(0, 8)
         }
       })
     })
@@ -49,14 +49,14 @@ class Music extends React.Component {
 
           <hr/>
 
-          <div className="container-fluid popular-list">
+          <div className="popular-list">
             {this.state.artists.map((artist) => {
               return (<MusicGrid img={artist.image[3]["#text"]} artistName={artist.name.substring(0,19)} playCount={artist.playcount} url={artist.url} artist={true}/>)
             })}
           </div>
 
           <br/>
-          <div className="container-fluid popular-list">
+          <div className="popular-list">
             {this.state.albums.map((albums) => {
               return (<MusicGrid img={albums.image[3]["#text"]} artistName={albums.name.substring(0,19)} playCount={albums.playcount} url={albums.url} artist={false}/>)
             })}
