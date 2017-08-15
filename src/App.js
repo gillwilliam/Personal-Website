@@ -28,18 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Router>
-        <div>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/graphs' component={Graph} />
-            <Route exact path='/music' component={Music} />
-            <Route render={function () {
-              return <Home />
-            }} />
-          </Switch>
-        </div>
-      </Router>
+        <Home />
       <Footer />
       </div>
     );
