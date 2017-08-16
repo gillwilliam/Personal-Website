@@ -1,7 +1,7 @@
 const BarzLogo = require('./BarzLogo.PNG');
 var projects = [
   {
-    img: "http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/icon2.jpg",
+    img: "https://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/icon2.jpg",
     title: "NBA-API",
     url: "https://github.com/gillwilliam/NBA-API",
     chipData: [

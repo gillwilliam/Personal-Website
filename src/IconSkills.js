@@ -8,13 +8,17 @@ class IconSkills extends React.Component {
           <center>
             <h2 style={{
               color: "#ffffff"
-            }}>Experience</h2>
+            }}>Skills</h2>
           </center><br/>
 
           <article>
             <figure>
               <i className="devicon-android-plain colored"></i>
               <figcaption>Android</figcaption>
+            </figure>
+            <figure>
+              <i className="devicon-c-plain colored"></i>
+              <figcaption>C</figcaption>
             </figure>
             <figure>
               <i className="devicon-java-plain colored"></i>
@@ -28,10 +32,7 @@ class IconSkills extends React.Component {
               <i className="devicon-mysql-plain colored"></i>
               <figcaption>MySQL</figcaption>
             </figure>
-            <figure>
-              <i className="devicon-c-plain colored"></i>
-              <figcaption>C</figcaption>
-            </figure>
+
             <figure>
               <i className="devicon-react-plain colored"></i>
               <figcaption>React</figcaption>

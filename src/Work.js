@@ -16,7 +16,7 @@ var work = [
       }
     ]
   }, {
-    img: "http://static1.squarespace.com/static/56a4fc36ab28105c1174867d/t/58d0aeb8b3db2bea2629560f/1500330563012/?format=1500w",
+    img: "https://static1.squarespace.com/static/56a4fc36ab28105c1174867d/t/58d0aeb8b3db2bea2629560f/1500330563012/?format=1500w",
     title: "Katla Labs",
     url: "https://www.sidekick-app.com/",
     chipData: [
@@ -32,7 +32,7 @@ var work = [
       }
     ]
   }, {
-    img: "http://www.viarail.ca/sites/all/files/media/images/logo/logo_viarail-large-carre.png",
+    img: "https://www.viarail.ca/sites/all/files/media/images/logo/logo_viarail-large-carre.png",
     title: "Via Rail",
     url: "http://www.viarail.ca/en",
     chipData: [
