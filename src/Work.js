@@ -1,6 +1,7 @@
+const team610 = require('./610.png');
 var work = [
   {
-    img: "http://www.team610.com/wp-content/uploads/2013/11/cropped-Untitled-151-150x150.png",
+    img: team610,
     title: "Team 610",
     url: "http://team610.com/",
     chipData: [

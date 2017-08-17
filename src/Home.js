@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Picture from './610.png'
 import SkillChips from './SkillChips'
 import Music from './Music';
 import IconSkills from './IconSkills';
@@ -26,7 +25,6 @@ class Home extends React.Component {
         <ExperienceGrid list={projects} title={"Projects"}/>
         </div>
         </div>
-        <br/>
         <br/>
         <Music/>
 

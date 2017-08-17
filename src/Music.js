@@ -3,6 +3,7 @@ import TypeWriter from 'react-typewriter';
 import TopElement from './TopElement';
 import HtmlTag from './HtmlTag';
 import Responsive from 'react-responsive';
+import MusicNote from './musicnote.svg'
 
 var React = require('react');
 const Api = require('./Api');
@@ -50,7 +51,7 @@ class Music extends React.Component {
         <div className="center">
           <br/>
 
-          <img src="https://image.flaticon.com/icons/svg/149/149125.svg" style={{
+          <img src={MusicNote} style={{
             height: "150",
             width: 150
           }}/>
@@ -127,8 +128,7 @@ class MusicGrid extends React.Component {
         </li>
         <li style={{
           fontWeight: "bold"
-        }}>{this.props.playCount}
-          plays</li>
+        }}>{this.props.playCount} plays</li>
       </ul>
     )
   }
