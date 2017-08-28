@@ -1,5 +1,6 @@
 import TypeWriter from 'react-typewriter';
 import ContactInfo from './ContactInfo';
+import ProfilePic from './pp.jpg';
 var React = require('react');
 
 class Header extends React.Component {
@@ -7,16 +8,15 @@ class Header extends React.Component {
   render() {
     return (
       <div className="jumbotron">
-        <div className="row">
-          <div className="col-sm-4">
-            <TypeWriter initDelay={2000} minDelay={80} typing={1}>
-              <h2>William Gill</h2>
-            </TypeWriter>
-            <p>Computer Science Student
-              <br/>
-              University of Waterloo Class of 2021</p>
+        <div className="row vertical-align">
+          <div className="col-lg-3 col-md-5 col-sm-4">
+                <h2>William Gill</h2>
+              <p>Computer Science Student
+                <br/>
+                University of Waterloo Class of 2021</p>
           </div>
-          <div className="col-sm-5 pull-right">
+
+          <div className="col-lg-5 col-md-7 col-sm-8">
             <div className="row">
               <ContactInfo/>
             </div>
@@ -27,6 +27,11 @@ class Header extends React.Component {
               </a>
             </div>
           </div>
+
+          <div className="col-lg-3 col-md-12 col-sm-12 center">
+            <img className="Profile-Pic img-responsive" src={ProfilePic} alt="Card image cap"/>
+          </div>
+
         </div>
 
       </div>
