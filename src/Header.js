@@ -21,7 +21,7 @@ class Header extends React.Component {
               <ContactInfo/>
             </div>
             <div className="row center">
-              <a target="_blank" href="https://drive.google.com/file/d/0ByuSLmVuUKs8QkdvOTdKZDFySG8/view">
+              <a target="_blank" href="https://drive.google.com/file/d/0ByuSLmVuUKs8MUpFeFZpWnphVHM/view">
                 <button id="resume" onClick={this.download} className="btn btn-primary btn-outline">Resume
                 </button>
               </a>
