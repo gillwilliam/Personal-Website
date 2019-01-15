@@ -13,7 +13,7 @@ var projects = [
         label: 'Express'
       }, {
         key: 2,
-        label: 'ES6'
+        label: 'TensorFlow'
       }
     ]
   }, {

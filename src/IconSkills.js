@@ -13,12 +13,16 @@ class IconSkills extends React.Component {
 
           <article>
             <figure>
-              <i className="devicon-android-plain colored"></i>
-              <figcaption>Android</figcaption>
+              <i className="devicon-react-plain colored"></i>
+              <figcaption>React</figcaption>
             </figure>
             <figure>
-              <i className="devicon-c-plain colored"></i>
-              <figcaption>C</figcaption>
+              <i className="devicon-cplusplus-plain colored"></i>
+              <figcaption>C++</figcaption>
+            </figure>
+            <figure>
+              <i className="devicon-django-plain colored"></i>
+              <figcaption>Django</figcaption>
             </figure>
             <figure>
               <i className="devicon-java-plain colored"></i>
@@ -32,18 +36,13 @@ class IconSkills extends React.Component {
               <i className="devicon-mysql-plain colored"></i>
               <figcaption>MySQL</figcaption>
             </figure>
-
             <figure>
-              <i className="devicon-react-plain colored"></i>
-              <figcaption>React</figcaption>
+              <i className="devicon-python-plain colored"></i>
+              <figcaption>Python</figcaption>
             </figure>
             <figure>
-              <i className="devicon-javascript-plain colored"></i>
-              <figcaption>JavaScript</figcaption>
-            </figure>
-            <figure>
-              <i className="devicon-bootstrap-plain colored"></i>
-              <figcaption>Bootstrap</figcaption>
+              <i className="devicon-android-plain colored"></i>
+              <figcaption>Android</figcaption>
             </figure>
 
           </article>
