@@ -1,6 +1,23 @@
 const BarzLogo = require('./BarzLogo.PNG');
 var projects = [
   {
+   img: "http://sas.uwaterloo.ca/~wang/img/uw.png",
+   title: "UWaterloo Machine Learning Lab",
+   url: "https://uwaterloo.ca/scholar/mcrowley/lab",
+   chipData: [
+     {
+       key: 0,
+       label: 'TensorFlow'
+     }, {
+       key: 1,
+       label: 'Python'
+     }, {
+       key: 2,
+       label: 'Azure'
+     }
+   ]
+  },
+  {
     img: "https://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/icon2.jpg",
     title: "NBA-API",
     url: "https://github.com/gillwilliam/NBA-API",
@@ -46,22 +63,6 @@ var projects = [
       }, {
         key: 2,
         label: 'Firebase'
-      }
-    ]
-  }, {
-    img: "http://sas.uwaterloo.ca/~wang/img/uw.png",
-    title: "University of Waterloo",
-    url: "http://www.viarail.ca/en",
-    chipData: [
-      {
-        key: 0,
-        label: 'React'
-      }, {
-        key: 1,
-        label: 'NodeJS'
-      }, {
-        key: 2,
-        label: 'SQL'
       }
     ]
   }

@@ -47,7 +47,7 @@ var work = [
           label: 'Python'
         }, {
           key: 2,
-          label: 'Google Cloud APIs'
+          label: 'AWS'
         }
       ]
     },
