@@ -1,11 +1,16 @@
 const team610 = require('./610.png');
+const ZanbatoLogo = require('./ZanbatoLogo.png');
+const ViaRailLogo = require('./ViaRailLogo.png');
+const ThomsonReutersLogo = require('./ThomsonReutersLogo.png');
+const TDLogo = require('./TDLogo.jpg');
 var work = [
 {
-    img: "https://www.viarail.ca/sites/all/files/media/images/logo/logo_viarail-large-carre.png",
+    img: ViaRailLogo,
     title: "Via Rail",
     url: "http://www.viarail.ca/en",
     role: "Innovation Engineering",
     date: "May-Sept, 2017",
+    location: "Montreal, QC",
     chipData: [
       {
         key: 0,
@@ -21,11 +26,12 @@ var work = [
     description:["•	Completed a real-time, data-intensive web app that will earn VIA Rail ~$200,000/yr as a Full-Stack developer",],
   },
   {
-    img: "https://www.caubo.ca/wp-content/uploads/2016/11/TD-Asset-Management.jpg",
+    img: TDLogo,
     title: "TD Asset Management",
     role: "Portfolio Anayltics Developer",
     url: "https://www.td.com/ca/en/asset-management/home/",
     date: "Jan-May, 2018",
+    location: "Toronto, ON",
     chipData: [
       {
         key: 0,
@@ -41,11 +47,12 @@ var work = [
     description:["•	Created a Batch Portfolio Optimization tool as part of a large suite of apps for Fixed Income Portfolio Managers","•	Used RabbitMQ (message broker) and Celery (task queue) to parallelize stages of the optimization across multiple machines"],
   },
   {
-      img: "https://d323e8de356d3090e307b3d5-qoxugpjbdnjy.netdna-ssl.com/wp-content/uploads/2016/11/ThomsonReuters-150x150.png",
+      img: ThomsonReutersLogo,
       title: "Thomson Reuters",
       role: "Software Developer Intern",
       url: "https://www.thomsonreuters.com/en.html",
       date: "Sept-Dec, 2018",
+      location: "Toronto, ON",
       chipData: [
         {
           key: 0,
@@ -61,11 +68,12 @@ var work = [
       description: ["•	Developed fast code compilation system that remotely (Azure) compiles modules in parallel, while caching results for quick distribution", "o	Will save 6 hours of compiling time of a developer’s time per week", "•	Optimized developer workflow of Java Spring application by adding plugins and writing scripts that made processes faster – e.g. Database builds are 10x faster", "•	Increased coverage of tracking analytics to improve customer experience by introducing Mixpanel and Google Analytics",]
     },
   {
-      img: "http://sas.uwaterloo.ca/~wang/img/uw.png",
+      img: ZanbatoLogo,
       title: "Zanbato",
       role: "Software Engineering Intern",
       url: "https://zanbato.com/",
       date: "May-Sept, 2019",
+      location: "Mountain View, CA",
       chipData: [
         {
           key: 0,

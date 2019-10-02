@@ -56,6 +56,7 @@ class ExperienceGrid extends React.Component {
                   description={elem.description || ["TESTING"]}
                   date={elem.date || ""}
                   role={elem.role || ""}
+                  location={elem.location || ""}
                 />
               </div>
             </div>
@@ -69,9 +70,6 @@ class ExperienceGrid extends React.Component {
 class ExperienceElement extends React.Component {
 
   render() {
-
-    console.log(this.props.description);
-
     var imgStyle = {
       width: "20rem"
     };
@@ -82,13 +80,13 @@ class ExperienceElement extends React.Component {
           <a className="col-sm-4" style={{
             color: "#ffffff"
           }} href={this.props.url}>
-          <h4>{this.props.title}</h4>
-          <h4>{this.props.role}</h4>
+          <h4>{this.props.title} <br />
+          {this.props.role}</h4>
           </a>
           <div className="col-sm-6">
             <SkillChips chip={this.props.chip}/>
           </div>
-          <h4 className="col-sm-2">{this.props.date}</h4>
+          <h4 className="col-sm-2">{this.props.location} <br /> {this.props.date}</h4>
         </div>
         <div className="row">
           <div className="col-sm-4">

@@ -1,7 +1,10 @@
 const BarzLogo = require('./BarzLogo.PNG');
+const UWLogo = require('./uwLogo.png');
+const NBALogo = require('./nbaLogo.jpg');
+
 var projects = [
   {
-   img: "http://sas.uwaterloo.ca/~wang/img/uw.png",
+   img: UWLogo,
    title: "UWaterloo Machine Learning Lab",
    url: "https://uwaterloo.ca/scholar/mcrowley/lab",
    chipData: [
@@ -19,7 +22,7 @@ var projects = [
     description: ["•	Built a forest fire simulator with custom importable starting states and customizable burn policies to train reinforcement learning models", "•	Modeling the spread of the fire with tensor arithmetic, providing the probability of fire spreading to any cell given current state",],
   },
   {
-    img: "https://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/icon2.jpg",
+    img: NBALogo,
     title: "NBA-API",
     url: "https://github.com/gillwilliam/NBA-API",
     chipData: [
