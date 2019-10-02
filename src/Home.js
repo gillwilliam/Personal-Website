@@ -21,10 +21,11 @@ class Home extends React.Component {
           <br/>
           <div className="container-fluid my-experience">
             <ExperienceGrid list={work} title={"Work Experience"}/>
-            <hr/>
-            <ExperienceGrid list={projects} title={"Projects"}/>
           </div>
-        </div>
+          <div className="container-fluid my-experience" style={{ background: "#21a8dc"}}>
+            <ExperienceGrid list={projects} title={"Projects & Research"}/>
+          </div>
+      </div>
         <br/>
         <Music/>
 
@@ -35,21 +36,29 @@ class Home extends React.Component {
 
 class ExperienceGrid extends React.Component {
   render() {
-
     return (
-      <div className="container">
+      <div className={"container"}>
         <div className="center">
           <h2 style={{
             color: "#ffffff"
           }}>{this.props.title}</h2>
         </div>
         {this.props.list.map((elem, index) => {
+          console.log(elem);
           return (
             <div>
-              <div className="margin-add col-md-3 experience-back">
-                <ExperienceElement url={elem.url} img={elem.img} chip={elem.chipData} title={elem.title}/>
+              <div>
+                <ExperienceElement
+                  url={elem.url}
+                  img={elem.img}
+                  chip={elem.chipData}
+                  title={elem.title}
+                  description={elem.description || ["TESTING"]}
+                  date={elem.date || ""}
+                  role={elem.role || ""}
+                  location={elem.location || ""}
+                />
               </div>
-              {(index != 2) && <div className="col-sm-1"/>}
             </div>
           )
         })}
@@ -61,26 +70,33 @@ class ExperienceGrid extends React.Component {
 class ExperienceElement extends React.Component {
 
   render() {
-
     var imgStyle = {
       width: "20rem"
     };
 
     return (
       <div className="row">
-        <a style={{
-          color: "gold"
-        }} href={this.props.url}>
-          <h4>{this.props.title}</h4>
-        </a>
         <div className="row">
-          <div className="col-sm-7">
-            <img src={this.props.img} alt="Card image cap"/>
-          </div>
-          <div className="col-sm-3">
+          <a className="col-sm-4" style={{
+            color: "#ffffff"
+          }} href={this.props.url}>
+          <h4>{this.props.title} <br />
+          {this.props.role}</h4>
+          </a>
+          <div className="col-sm-6">
             <SkillChips chip={this.props.chip}/>
           </div>
+          <h4 className="col-sm-2">{this.props.location} <br /> {this.props.date}</h4>
         </div>
+        <div className="row">
+          <div className="col-sm-4">
+            <img src={this.props.img} alt="Card image cap"/>
+          </div>
+          <ul className="col-sm-7">
+            {this.props.description.map(desc => <li>{desc}</li>)}
+          </ul>
+        </div>
+        <hr />
       </div>
     )
   }

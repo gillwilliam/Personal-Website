@@ -10,9 +10,9 @@ class Header extends React.Component {
         <div className="row vertical-align">
           <div className="col-lg-3 col-md-5 col-sm-4">
                 <h2>William Gill</h2>
-              <p>3A Computer Science Student
+              <p>3B Computer Science Student
                 <br/>
-                University of Waterloo Class of 2021</p>
+                University of Waterloo <br/> Class of 2021</p>
           </div>
 
           <div className="col-lg-5 col-md-7 col-sm-8">
@@ -20,7 +20,7 @@ class Header extends React.Component {
               <ContactInfo/>
             </div>
             <div className="row center">
-              <a target="_blank" href="https://drive.google.com/open?id=1BY9eo4jnBDg3P9ihNEyqJFQZaCLzqW7l">
+              <a target="_blank" href="https://drive.google.com/file/d/1SUfD6QlgmZN68_CA3Qc-ghI5m-JfpgFM/view?usp=sharing">
                 <button id="resume" onClick={this.download} className="btn btn-primary btn-outline">Resume
                 </button>
               </a>
